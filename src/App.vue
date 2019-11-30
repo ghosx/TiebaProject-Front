@@ -1,4 +1,5 @@
 <template>
+
   <div id="app">
       <Index></Index>
   </div>
@@ -16,5 +17,7 @@ export default {
 </script>
 
 <style>
-
+    [v-cloak] {
+        display: none
+    }
 </style>
