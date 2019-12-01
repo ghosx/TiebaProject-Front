@@ -78,7 +78,7 @@
         },
         mounted: function () {
             var self = this
-            fetch("status/")
+            fetch("status/?t="+(Date.parse(new Date()) / 1000))
                 .then(res => res.json())
                 .then(function (res) {
                     self.user_count = res.user_count
@@ -91,7 +91,7 @@
             start: function () {
                 let confirm = this.$confirm
                 let notify = this.$notify
-                fetch("image/",)
+                fetch("image/?t="+(Date.parse(new Date()) / 1000))
                     .then(res => res.json())
                     .then(function (res) {
                         var storage = window.localStorage;
@@ -104,7 +104,7 @@
                             center: true
                         }).then(() => {
                             let sign = storage.getItem("sign")
-                            fetch("bduss/?sign=" + sign,)
+                            fetch("bduss/?sign=" + sign+"&t="+(Date.parse(new Date()) / 1000))
                                 .then(function (res) {
                                     if (res.status === 200) {
                                         notify({
