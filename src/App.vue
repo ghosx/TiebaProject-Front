@@ -17,7 +17,5 @@ export default {
 </script>
 
 <style>
-    [v-cloak] {
-        display: none
-    }
+
 </style>
